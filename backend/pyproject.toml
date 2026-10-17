@@ -1,0 +1,23 @@
+[project]
+name = "chess-helper-backend"
+version = "0.1.0"
+description = "Chess board recognition and best-move prediction API"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "opencv-python-headless>=4.9",
+    "numpy>=1.26",
+    "stockfish>=3.28",
+    "chess>=1.10",
+    "pydantic-settings>=2.7",
+    "python-multipart>=0.0.20",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*", "models*"]
+
+[tool.uv]
+find-links = ["https://download.pytorch.org/whl/cpu"]
